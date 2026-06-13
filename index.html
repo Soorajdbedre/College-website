@@ -6,9 +6,25 @@
     <title>Best PU College in South Bangalore | Vedantha PU & Degree College</title>
     <meta name="description" content="Vedantha PU & Degree College in South Bangalore offers top-quality Science, Commerce & Management programs with expert faculty, NEET/JEE coaching, state-of-the-art campus, and strong academic results.">
 
-    <!-- Google Fonts -->
+    <!-- SEO & Open Graph Tags -->
+    <meta property="og:title" content="Best PU College in South Bangalore | Vedantha PU & Degree College">
+    <meta property="og:description" content="Vedantha PU & Degree College in South Bangalore offers top-quality Science, Commerce & Management programs. Admissions open for 2026-27.">
+    <meta property="og:image" content="https://www.vedanthacollege.com/images/logo.png">
+    <meta property="og:url" content="https://www.vedanthacollege.com/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vedantha PU & Degree College">
+    <meta name="twitter:description" content="Top-quality Science, Commerce & Management programs in South Bangalore.">
+    <meta name="twitter:image" content="https://www.vedanthacollege.com/images/logo.png">
+
+    <!-- Performance Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Bootstrap 5 CSS -->
@@ -39,22 +55,25 @@
             <div class="modal-content border-0 shadow-lg">
                 <div class="modal-header bg-primary text-white" style="background-color: var(--color-primary) !important;">
                     <h5 class="modal-title fw-bold" id="enrollModalLabel">Enroll Today</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close modal"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Name*" required>
+                    <form id="modalEnrollForm" novalidate>
+                        <div class="mb-3 position-relative">
+                            <input type="text" class="form-control" id="modalName" placeholder="Name*" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
                         </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email*" required>
+                        <div class="mb-3 position-relative">
+                            <input type="email" class="form-control" id="modalEmail" placeholder="Email*" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
-                        <div class="row mb-3">
+                        <div class="row mb-3 position-relative">
                             <div class="col-6">
-                                <input type="tel" class="form-control" placeholder="Phone*" required>
+                                <input type="tel" class="form-control" id="modalPhone" placeholder="Phone*" pattern="[0-9]{10}" required>
+                                <div class="invalid-feedback">Valid 10-digit phone number required.</div>
                             </div>
                             <div class="col-6">
-                                <select class="form-select" required>
+                                <select class="form-select" id="modalCourse" required>
                                     <option value="" selected disabled>Select Course *</option>
                                     <option value="PCMB">PCMB</option>
                                     <option value="PCMCS">PCMCS</option>
@@ -64,11 +83,14 @@
                                     <option value="Degree">Degree (B.COM)</option>
                                     <option value="Logistics">Logistics & Aviation</option>
                                 </select>
+                                <div class="invalid-feedback">Please select a course.</div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="3" placeholder="Message*" required></textarea>
+                        <div class="mb-3 position-relative">
+                            <textarea class="form-control" id="modalMessage" rows="3" placeholder="Message*" required></textarea>
+                            <div class="invalid-feedback">Please enter a message.</div>
                         </div>
+                        <div class="form-success-msg text-success d-none mb-2" id="modalSuccess">Form submitted successfully!</div>
                         <button type="submit" class="btn btn-primary-custom w-100">Submit Now</button>
                     </form>
                 </div>
@@ -80,9 +102,9 @@
     <div class="top-bar">
         <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
             <div class="d-flex align-items-center mb-2 mb-md-0">
-                <i class="fa fa-university me-2"></i> <span>Welcome to Vedantha College</span>
+                <i class="fa fa-university me-2" aria-hidden="true"></i> <span>Welcome to Vedantha College</span>
             </div>
-            <div class="marquee-container w-50">
+            <div class="marquee-container w-50" aria-label="Important Announcement">
                 <div class="marquee-content">
                     ADMISSIONS OPEN FOR 2026-27.
                 </div>
@@ -93,17 +115,17 @@
     <!-- 4. Header Top (Contact & Logo) -->
     <div class="container py-3 d-none d-lg-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
-            <div class="icon-box fs-2 text-primary me-3" style="color: var(--color-primary) !important;"><i class="fa fa-envelope"></i></div>
+            <div class="icon-box fs-2 text-primary me-3" style="color: var(--color-primary) !important;"><i class="fa fa-envelope" aria-hidden="true"></i></div>
             <div>
                 <span class="d-block text-muted small">Mail Us</span>
                 <a href="mailto:principal@vedanthacollege.com" class="fw-bold text-dark">principal@vedanthacollege.com</a>
             </div>
         </div>
         <div class="logo text-center">
-            <a href="index.html"><img src="https://www.vedanthacollege.com/images/logo.png" alt="logo" height="65"></a>
+            <a href="index.html"><img src="https://www.vedanthacollege.com/images/logo.png" alt="Vedantha College Home" height="65"></a>
         </div>
         <div class="d-flex align-items-center">
-            <div class="icon-box fs-2 text-primary me-3" style="color: var(--color-primary) !important;"><i class="fa fa-phone-alt"></i></div>
+            <div class="icon-box fs-2 text-primary me-3" style="color: var(--color-primary) !important;"><i class="fa fa-phone-alt" aria-hidden="true"></i></div>
             <div>
                 <span class="d-block text-muted small">Call Us</span>
                 <span class="fw-bold text-dark">9900611110 / 9900622220</span>
@@ -116,9 +138,9 @@
         <div class="container">
             <!-- Mobile logo -->
             <a class="navbar-brand d-lg-none" href="index.html">
-                <img src="https://www.vedanthacollege.com/images/logo.png" alt="logo" height="40">
+                <img src="https://www.vedanthacollege.com/images/logo.png" alt="Vedantha College Home" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -133,7 +155,7 @@
                             <li><a class="dropdown-item" href="#">Principal Desk</a></li>
                             <li><a class="dropdown-item" href="#">Faculty</a></li>
                             <li><a class="dropdown-item" href="#">Facilities</a></li>
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#videoModal">Vedantha College Video <i class="fa fa-play-circle text-danger ms-1"></i></a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#videoModal">Vedantha College Video <i class="fa fa-play-circle text-danger ms-1" aria-hidden="true"></i></a></li>
                         </ul>
                     </li>
                     
@@ -160,7 +182,7 @@
                     </li>
 
                     <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                        <button class="btn btn-primary-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRegister">Register Now</button>
+                        <button class="btn btn-primary-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRegister" aria-controls="offcanvasRegister">Register Now</button>
                     </li>
                 </ul>
             </div>
@@ -168,50 +190,51 @@
     </nav>
 
     <!-- 6. Hero Slider (18 Images) -->
-    <div class="swiper hero-slider">
+    <div class="swiper hero-slider" aria-label="Hero Images Carousel">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/toppers14thmay2026.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/jee2025-2026-results-1.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26_1.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26_2.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/scineceandcommerce26.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/science2026toppers.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/commerce2026toppers.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/totaltoppers2026.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/jee2025-2026-results.png" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-1.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-2.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-3.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-1.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2024-1.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/online-classes.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner2.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner3.jpg" alt="Slide"></div>
-            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner4.jpg" alt="Slide"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/toppers14thmay2026.png" alt="Toppers May 2026"></div>
+            <!-- Lazy loading added to subsequent slides -->
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/jee2025-2026-results-1.png" alt="JEE Results" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26.png" alt="Science Topper" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26_1.png" alt="Science Topper" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/sciencetopper26_2.png" alt="Science Topper" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/scineceandcommerce26.png" alt="Science and Commerce" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/science2026toppers.png" alt="Science 2026 Toppers" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/commerce2026toppers.png" alt="Commerce 2026 Toppers" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/totaltoppers2026.png" alt="Total Toppers 2026" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/jee2025-2026-results.png" alt="JEE 2025-26 Results" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-1.jpg" alt="Banner 1" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-2.jpg" alt="Banner 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-24-4-3.jpg" alt="Banner 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2025-1.jpg" alt="Banner 2025" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner-2024-1.jpg" alt="Banner 2024" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/online-classes.jpg" alt="Online Classes" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner2.jpg" alt="Campus Banner 2" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner3.jpg" alt="Campus Banner 3" loading="lazy"></div>
+            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/banner4.jpg" alt="Campus Banner 4" loading="lazy"></div>
         </div>
         <!-- Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next" aria-label="Next slide"></div>
+        <div class="swiper-button-prev" aria-label="Previous slide"></div>
     </div>
 
     <!-- 7. Popular Courses -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" id="courses-section">
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2>OUR POPULAR COURSES</h2>
                 <p class="text-muted max-w-700 mx-auto">Through Vedantha’s competency model, an assessment is made of the students core attributes, behaviours and leadership quotients to identify and groom Leaders of Tomorrow.</p>
             </div>
 
-            <div class="swiper courses-slider pb-5">
+            <div class="swiper courses-slider pb-5" aria-label="Popular Courses Carousel">
                 <div class="swiper-wrapper">
                     <!-- Course 1 -->
                     <div class="swiper-slide">
                         <div class="course-card card">
                             <div class="position-relative">
-                                <img src="https://www.vedanthacollege.com/images/courses/pcmb.jpg" alt="PCMB" class="w-100">
+                                <img src="https://www.vedanthacollege.com/images/courses/pcmb.jpg" alt="PCMB Students" class="w-100" loading="lazy">
                                 <div class="position-absolute bottom-0 end-0 bg-white p-2 rounded-start-top shadow-sm">
-                                    <a href="#" class="text-primary"><i class="fa fa-link"></i></a>
+                                    <a href="#" class="text-primary" aria-label="Read more about PCMB"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
@@ -228,9 +251,9 @@
                     <div class="swiper-slide">
                         <div class="course-card card">
                             <div class="position-relative">
-                                <img src="https://www.vedanthacollege.com/images/courses/seba.jpg" alt="SEBA" class="w-100">
+                                <img src="https://www.vedanthacollege.com/images/courses/seba.jpg" alt="Commerce Students" class="w-100" loading="lazy">
                                 <div class="position-absolute bottom-0 end-0 bg-white p-2 rounded-start-top shadow-sm">
-                                    <a href="#" class="text-primary"><i class="fa fa-link"></i></a>
+                                    <a href="#" class="text-primary" aria-label="Read more about SEBA"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
@@ -247,9 +270,9 @@
                     <div class="swiper-slide">
                         <div class="course-card card">
                             <div class="position-relative">
-                                <img src="https://www.vedanthacollege.com/images/courses/degree.jpg" alt="Degree" class="w-100">
+                                <img src="https://www.vedanthacollege.com/images/courses/degree.jpg" alt="Degree Students" class="w-100" loading="lazy">
                                 <div class="position-absolute bottom-0 end-0 bg-white p-2 rounded-start-top shadow-sm">
-                                    <a href="#" class="text-primary"><i class="fa fa-link"></i></a>
+                                    <a href="#" class="text-primary" aria-label="Read more about Degree"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                             <div class="card-body p-4 d-flex flex-column">
@@ -278,18 +301,18 @@
             
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="swiper testimonials-slider pb-5">
+                    <div class="swiper testimonials-slider pb-5" aria-label="Testimonials Video Carousel">
                         <div class="swiper-wrapper">
                             <!-- Testimonial 1 -->
                             <div class="swiper-slide text-center">
-                                <video class="testimonial-video" controls>
+                                <video class="testimonial-video" controls title="Srisanjith Testimonial Video">
                                     <source src="https://www.vedanthacollege.com/images/srisanjith.mp4" type="video/mp4">
                                 </video>
                                 <h4 class="mt-3 mb-0">Srisanjith</h4>
                             </div>
                             <!-- Testimonial 2 -->
                             <div class="swiper-slide text-center">
-                                <video class="testimonial-video" controls>
+                                <video class="testimonial-video" controls title="Abhinandan Testimonial Video">
                                     <source src="https://www.vedanthacollege.com/images/abhinandan-nit-surathkal.mp4" type="video/mp4">
                                 </video>
                                 <h4 class="mt-3 mb-0">Abhinandan</h4>
@@ -317,20 +340,20 @@
                 </div>
                 <div class="col-lg-7">
                     <!-- Achievements Slider (9 Images) -->
-                    <div class="swiper achievements-slider rounded overflow-hidden shadow-md">
+                    <div class="swiper achievements-slider rounded overflow-hidden shadow-md" aria-label="Achievements Image Carousel">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements1.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements2.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements3.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements4.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements5.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements6.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements7.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements8.jpg" class="w-100" alt="Ach"></div>
-                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements9.jpg" class="w-100" alt="Ach"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements1.jpg" class="w-100" alt="Achievement 1" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements2.jpg" class="w-100" alt="Achievement 2" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements3.jpg" class="w-100" alt="Achievement 3" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements4.jpg" class="w-100" alt="Achievement 4" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements5.jpg" class="w-100" alt="Achievement 5" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements6.jpg" class="w-100" alt="Achievement 6" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements7.jpg" class="w-100" alt="Achievement 7" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements8.jpg" class="w-100" alt="Achievement 8" loading="lazy"></div>
+                            <div class="swiper-slide"><img src="https://www.vedanthacollege.com/images/achivements9.jpg" class="w-100" alt="Achievement 9" loading="lazy"></div>
                         </div>
-                        <div class="swiper-button-next ach-next"></div>
-                        <div class="swiper-button-prev ach-prev"></div>
+                        <div class="swiper-button-next ach-next" aria-label="Next achievement"></div>
+                        <div class="swiper-button-prev ach-prev" aria-label="Previous achievement"></div>
                     </div>
                 </div>
             </div>
@@ -354,32 +377,31 @@
 
     <!-- 10. Gallery Slider (23 Images) -->
     <section class="gallery-section bg-dark">
-        <div class="swiper gallery-slider">
+        <div class="swiper gallery-slider" aria-label="Photo Gallery Carousel">
             <div class="swiper-wrapper">
-                <!-- Generating 23 slides using JS or explicitly. Since HTML is static, I'll put a few explicit and let it loop smoothly -->
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/1.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/2.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/3.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/4.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/5.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/6.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/7.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/8.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/9.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/10.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/11.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/12.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/13.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/14.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/15.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/16.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/17.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/18.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/19.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/20.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/21.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/22.jpg" alt="Gallery"></a></div>
-                <div class="swiper-slide"><a href="#"><img src="https://www.vedanthacollege.com/images/gallery/23.jpg" alt="Gallery"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 1"><img src="https://www.vedanthacollege.com/images/gallery/1.jpg" alt="Gallery 1" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 2"><img src="https://www.vedanthacollege.com/images/gallery/2.jpg" alt="Gallery 2" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 3"><img src="https://www.vedanthacollege.com/images/gallery/3.jpg" alt="Gallery 3" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 4"><img src="https://www.vedanthacollege.com/images/gallery/4.jpg" alt="Gallery 4" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 5"><img src="https://www.vedanthacollege.com/images/gallery/5.jpg" alt="Gallery 5" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 6"><img src="https://www.vedanthacollege.com/images/gallery/6.jpg" alt="Gallery 6" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 7"><img src="https://www.vedanthacollege.com/images/gallery/7.jpg" alt="Gallery 7" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 8"><img src="https://www.vedanthacollege.com/images/gallery/8.jpg" alt="Gallery 8" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 9"><img src="https://www.vedanthacollege.com/images/gallery/9.jpg" alt="Gallery 9" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 10"><img src="https://www.vedanthacollege.com/images/gallery/10.jpg" alt="Gallery 10" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 11"><img src="https://www.vedanthacollege.com/images/gallery/11.jpg" alt="Gallery 11" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 12"><img src="https://www.vedanthacollege.com/images/gallery/12.jpg" alt="Gallery 12" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 13"><img src="https://www.vedanthacollege.com/images/gallery/13.jpg" alt="Gallery 13" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 14"><img src="https://www.vedanthacollege.com/images/gallery/14.jpg" alt="Gallery 14" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 15"><img src="https://www.vedanthacollege.com/images/gallery/15.jpg" alt="Gallery 15" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 16"><img src="https://www.vedanthacollege.com/images/gallery/16.jpg" alt="Gallery 16" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 17"><img src="https://www.vedanthacollege.com/images/gallery/17.jpg" alt="Gallery 17" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 18"><img src="https://www.vedanthacollege.com/images/gallery/18.jpg" alt="Gallery 18" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 19"><img src="https://www.vedanthacollege.com/images/gallery/19.jpg" alt="Gallery 19" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 20"><img src="https://www.vedanthacollege.com/images/gallery/20.jpg" alt="Gallery 20" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 21"><img src="https://www.vedanthacollege.com/images/gallery/21.jpg" alt="Gallery 21" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 22"><img src="https://www.vedanthacollege.com/images/gallery/22.jpg" alt="Gallery 22" loading="lazy"></a></div>
+                <div class="swiper-slide"><a href="#" aria-label="View gallery image 23"><img src="https://www.vedanthacollege.com/images/gallery/23.jpg" alt="Gallery 23" loading="lazy"></a></div>
             </div>
         </div>
     </section>
@@ -390,21 +412,21 @@
             <!-- Footer Contact Info Grid -->
             <div class="row text-center text-md-start mb-5 pb-4 border-bottom border-secondary border-opacity-25">
                 <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0">
-                    <i class="fa fa-map-marker-alt fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;"></i>
+                    <i class="fa fa-map-marker-alt fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;" aria-hidden="true"></i>
                     <div>
                         <h5 class="mb-1">Address</h5>
-                        <p class="mb-0 small">Krishna Indira Building, 25/1A & 1B,<br>Vasanthapura, Bengaluru - 560061</p>
+                        <address class="mb-0 small fst-normal">Krishna Indira Building, 25/1A & 1B,<br>Vasanthapura, Bengaluru - 560061</address>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0">
-                    <i class="fa fa-phone-alt fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;"></i>
+                    <i class="fa fa-phone-alt fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;" aria-hidden="true"></i>
                     <div>
                         <h5 class="mb-1">Call Us</h5>
                         <p class="mb-0 small">86601 48961<br>9900611110 / 9900622220</p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start">
-                    <i class="fa fa-envelope fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;"></i>
+                    <i class="fa fa-envelope fs-2 me-3 text-secondary" style="color: var(--color-secondary) !important;" aria-hidden="true"></i>
                     <div>
                         <h5 class="mb-1">Email</h5>
                         <p class="mb-0 small">principal@vedanthacollege.com<br>www.vedanthacollege.com</p>
@@ -415,43 +437,43 @@
             <!-- Footer Main Content -->
             <div class="row">
                 <div class="col-lg-5 pe-lg-5 mb-4 mb-lg-0">
-                    <img src="https://www.vedanthacollege.com/images/logo-white.png" alt="Logo White" width="200" class="mb-4">
+                    <img src="https://www.vedanthacollege.com/images/logo-white.png" alt="Vedantha Logo" width="200" class="mb-4" loading="lazy">
                     <p class="small lh-lg">Vedantha is a dynamic institution and boasts of some of the most creative, skilled, forward-thinking and ethnically varied talent pool in today's educational world. Through our continuous efforts at grooming and value addition, we offer our students not just studies but a career with a clear insight on their future.</p>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5 class="mb-4 text-secondary">OUR SITEMAP</h5>
-                    <div class="row sitemap">
+                    <nav class="row sitemap" aria-label="Footer navigation">
                         <div class="col-6">
                             <ul class="list-unstyled">
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Home</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Blogs</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Why Vedantha</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Facilities</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Principal Desk</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>PUC</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Degree</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Home</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Blogs</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Why Vedantha</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Facilities</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Principal Desk</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>PUC</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Degree</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled">
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Admission</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Events</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Virtual Tour</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Privacy Policy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Refund Policy</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right me-2"></i>Terms</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Admission</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Events</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Virtual Tour</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Contact Us</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Privacy Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Refund Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right me-2" aria-hidden="true"></i>Terms</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </nav>
                 </div>
                 <div class="col-lg-3">
                     <h5 class="mb-4 text-secondary">CONNECT WITH US</h5>
                     <div class="social-links mb-4">
-                        <a href="https://www.facebook.com/VedanthaEdu/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com/vedanthaedu" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/VedanthaEdu/" target="_blank" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/vedanthaedu" target="_blank" aria-label="Visit our Twitter page"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     </div>
-                    <img src="https://www.vedanthacollege.com/images/qr-code-footer.png" alt="QR Code" width="100" class="rounded bg-white p-1">
+                    <img src="https://www.vedanthacollege.com/images/qr-code-footer.png" alt="Virtual Tour QR Code" width="100" class="rounded bg-white p-1" loading="lazy">
                 </div>
             </div>
         </div>
@@ -459,55 +481,70 @@
         <div class="footer-bottom mt-5">
             <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <p class="mb-0 small">© <script>document.write(new Date().getFullYear());</script> Vedantha College. All Rights Reserved.</p>
-                <p class="mb-0 small">Modernized by <a href="#" class="text-white text-decoration-underline">Your Agent</a></p>
             </div>
         </div>
     </footer>
 
     <!-- 12. Floating Buttons -->
-    <div id="scrollUp" class="scrollup">
-        <i class="fa fa-angle-up"></i>
+    <div id="scrollUp" class="scrollup" role="button" aria-label="Scroll to top" tabindex="0">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=8660148961" target="_blank" class="whatsapp-float">
-        <img src="https://www.vedanthacollege.com/images/whatsapp.png" alt="WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=8660148961" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <img src="https://www.vedanthacollege.com/images/whatsapp.png" alt="WhatsApp Icon" loading="lazy">
     </a>
 
     <!-- 13. Off-Canvas Menu for Registration -->
     <div class="offcanvas offcanvas-end offcanvas-register" tabindex="-1" id="offcanvasRegister" aria-labelledby="offcanvasRegisterLabel">
         <div class="offcanvas-header border-bottom border-light border-opacity-25 pb-3">
-            <img src="https://www.vedanthacollege.com/images/logo-white.png" width="200" alt="logo">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <img src="https://www.vedanthacollege.com/images/logo-white.png" width="200" alt="Vedantha Logo">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close offcanvas"></button>
         </div>
         <div class="offcanvas-body">
             <h5 class="mb-4 text-secondary text-center">Register Now</h5>
-            <form>
-                <input type="text" class="form-control" placeholder="Name*" required>
-                <input type="email" class="form-control" placeholder="Email*" required>
-                <input type="tel" class="form-control" placeholder="Phone No*" required>
-                <select class="form-select" required>
-                    <option value="" selected disabled>Courses*</option>
-                    <option value="PCMB">PCMB</option>
-                    <option value="PCMCS">PCMCS</option>
-                    <option value="SEBA">SEBA</option>
-                    <option value="HEBA">HEBA</option>
-                    <option value="EBAC">EBAC</option>
-                    <option value="Degree">Degree (B.COM)</option>
-                    <option value="LA">Logistics & Aviation</option>
-                </select>
-                <textarea class="form-control" rows="4" placeholder="Message*" required></textarea>
+            <form id="offcanvasEnrollForm" novalidate>
+                <div class="mb-3 position-relative">
+                    <input type="text" class="form-control" id="ocName" placeholder="Name*" required>
+                    <div class="invalid-feedback text-warning">Please enter your name.</div>
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="email" class="form-control" id="ocEmail" placeholder="Email*" required>
+                    <div class="invalid-feedback text-warning">Please enter a valid email address.</div>
+                </div>
+                <div class="mb-3 position-relative">
+                    <input type="tel" class="form-control" id="ocPhone" placeholder="Phone No*" pattern="[0-9]{10}" required>
+                    <div class="invalid-feedback text-warning">Valid 10-digit phone number required.</div>
+                </div>
+                <div class="mb-3 position-relative">
+                    <select class="form-select" id="ocCourse" required>
+                        <option value="" selected disabled>Courses*</option>
+                        <option value="PCMB">PCMB</option>
+                        <option value="PCMCS">PCMCS</option>
+                        <option value="SEBA">SEBA</option>
+                        <option value="HEBA">HEBA</option>
+                        <option value="EBAC">EBAC</option>
+                        <option value="Degree">Degree (B.COM)</option>
+                        <option value="LA">Logistics & Aviation</option>
+                    </select>
+                    <div class="invalid-feedback text-warning">Please select a course.</div>
+                </div>
+                <div class="mb-3 position-relative">
+                    <textarea class="form-control" id="ocMessage" rows="4" placeholder="Message*" required></textarea>
+                    <div class="invalid-feedback text-warning">Please enter a message.</div>
+                </div>
+                <div class="form-success-msg text-success d-none mb-2" id="ocSuccess">Registration sent successfully!</div>
                 <button type="submit" class="btn btn-primary-custom w-100 mt-2">Submit</button>
             </form>
         </div>
     </div>
 
     <!-- 14. Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true" aria-labelledby="videoModalLabel">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content border-0 bg-dark text-white">
                 <div class="modal-header border-0">
-                    <h5 class="modal-title">About Vedantha College</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="videoModalLabel">About Vedantha College</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close video"></button>
                 </div>
                 <div class="modal-body p-0">
                     <video width="100%" controls controlsList="nodownload" poster="https://www.vedanthacollege.com/images/logo.png">
@@ -520,7 +557,6 @@
     </div>
 
     <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Swiper JS -->
